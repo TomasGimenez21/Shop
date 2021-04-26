@@ -1,0 +1,838 @@
+/*header*/
+header{
+  background: linear-gradient(to bottom,#25211e 0,rgba(37,33,30,0) 100%);
+}
+.headerBottom{
+    display: none;
+}
+/*carrousel*/
+
+.imgHeader{
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+}
+
+#imagen1{
+  display: block;
+  margin: auto;
+}
+#imagen2, #imagen3, #imagen4{
+  display: none;
+  margin: auto;
+
+}
+#cr{
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+#imagesCarrousel img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#points{
+  z-index: 1;
+  margin-top: -4%;
+  text-align: center;
+  position: relative;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: white;
+}
+
+#adelante{
+  float: right;
+}
+
+#atras{
+  float: left;
+}
+
+#rey{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+#rey svg{
+  fill: rgba(229,223,217,.5);
+}
+
+.buttonCR{
+  position: absolute;
+  left: 20%;
+  top: 60%;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.buttonCR h1{
+  font-size: 22px;
+  color: #000;
+  margin: 0;
+}
+
+.buttonCR:hover{
+  opacity: 0.5;
+}
+/*categories*/
+#categoriesCont{
+  justify-content: center;
+  background-color: white;
+  z-index: 4;
+  width: 100%;
+  border: solid 1px #dbd8d6;
+}
+
+.fixedCC{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background: white;
+}
+
+#categoriesCont ul{
+  display: flex;
+  width: 100%;
+  padding: 0;
+  min-height: 7%;
+  margin: 0;
+  height: min-content;
+}
+
+#categoriesCont .category{
+  list-style-type: none;
+  width: min-content;
+  padding: 1%;
+  display: flex;
+  border-left: 1px solid #dbd8d6;
+  flex-grow: 1;
+}
+
+#categoriesCont .category div{
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  width: 15px;
+  height: 15px;
+}
+
+#categoriesCont .category svg{
+  width: 15px;
+  height:15px;
+  stroke: black;
+}
+
+#categoriesCont .category h5{
+  font-weight: 400;
+  height: min-content;
+  display: block;
+  font-size: smaller;
+  margin-top: auto;
+  letter-spacing: 0.5px;
+  font-family: serif;
+  margin-bottom: auto;
+}
+
+#categoryCont{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0; 
+}
+
+#categoryCont div{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(230, 230, 230);
+  overflow-y: scroll;
+}
+
+#categoryCont .categoryCont{
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+  grid-row-gap: 0px;
+  border-top: solid 2px black;
+  display: none;
+  overflow-y: scroll;
+}
+
+#categoryCont .categoryCont li{
+  border-bottom: solid 1px #cccccc;
+  letter-spacing: 2px;
+  padding: 12px;
+  background-color: white;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#categoryCont .categoryCont .li:after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+  transition: all .4s linear;
+  height: 2px;
+  background: #383838;
+  z-index: 2;
+}
+
+#categoryCont .categoryCont .li:hover:after{
+  width: 100%;
+}
+/*clothes*/
+#clothesContBox button{
+  width: 150px;
+  outline: transparent;
+  height: 30px;
+  margin: 50px;
+  border: none;
+  color: white;
+  background: black;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#clothesContBox button svg{
+  fill: white;
+  width: 30px;
+  height: 30px;
+}
+
+.clothesCont .body .publicit{
+  width: 100%;
+  position: relative;
+}
+
+.clothesCont .body .publicit img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.publicit .text{
+  position: absolute;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  top: 50%;
+  letter-spacing: 1;
+  text-transform: uppercase;
+}
+
+.publicit .text h3{
+  font-size: medium;
+  padding: 4%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: white;
+  height: 60px;
+}
+
+.publicit .text .shop{
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.publicit .text .shop svg{
+  position: static;
+
+}
+
+.publicit .text .shop h5{
+  text-align: center;
+  font-size: x-small;
+}
+
+.clothesCont .body .publi{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.clothesCont .body .publi img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.clothesCont .body .publi .text{
+  position: absolute;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  top: 50%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 1;
+  text-transform: uppercase;
+}
+
+.clothesCont .body .publi .text h3{
+  font-size: medium;
+  padding: 4%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: white;
+  height: 60px;
+}
+
+.clothesCont .body .publi .text .shop{
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clothesCont .body .publi .text .shop svg{
+  position: static;
+
+}
+
+.clothesCont .body .publi .text .shop h5{
+  text-align: center;
+  font-size: x-small;
+}
+/*a*/
+#clothesCont{
+  background-color: #e7e7e7;
+}
+
+#clothesCont .header{
+  text-align: center;
+  background-color: black;
+}
+
+#clothesCont .header h1{
+  font-size: large;
+  font-weight: 400;
+  margin: 5px;
+  color: white;
+}
+
+#clothesCont .body{
+  display: grid;
+  background-color: #e7e7e7;
+}
+
+#clothesCont .body .clotheCont{
+  margin: .5%;
+  background-color: white;
+  position: relative;
+}
+
+#clothesCont .body .clotheCont svg{
+  position: absolute;
+  top: 6%;
+  right: 10%;
+  width: 20px;
+  height: 20px;
+}
+
+#clothesCont .body .clotheCont .img{
+  width: 75%;
+  height: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+}
+
+#clothesCont .body .clotheCont .img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#clothesCont .body .clotheCont .description{
+  height: 25%;
+  width: 100%;
+}
+
+#clothesCont .body .clotheCont .description p{
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 7%;
+  font-size: 10.5px;
+  padding-bottom: 0;
+  padding-top: 4%;
+  margin-bottom: 5px;
+  height: 67%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#clothesCont .body .clotheCont .description h4{
+  text-align: center;
+}
+
+#clothesCont .body .clotheCont .description .desc{
+  display: flex;
+  margin: auto;
+  width: fit-content;
+}
+
+#clothesCont .body .clotheCont .description .desc h4{
+  text-decoration: line-through;
+}
+
+#clothesCont .body .clotheCont .description .desc h5{
+  font-size: 15px;
+  padding-left: 8px;
+}
+
+#clothesCont .body .clotheCont .mensaje{
+  position: absolute;
+  background: rgb(192, 192, 192);
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  top: 0;
+  left: 4%;
+}
+
+#clothesCont .body .clotheCont .mensaje h1{
+  font-size: 12px;
+  margin: 4px;
+  color: white;
+  font-family: serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/*b*/
+#clothesContB{
+  background-color: #e7e7e7;
+}
+
+#clothesContB .header{
+  text-align: center;
+  border-bottom:  1px solid black;
+}
+
+#clothesContB .header h1{
+  font-size: large;
+  font-weight: 300;
+}
+
+#clothesContB .body{
+  display: grid;
+  background-color: white;
+}
+
+#clothesContB .body .clotheCont{
+  margin: .5%;
+  background-color: #e7e7e7;;
+  position: relative;
+}
+
+#clothesContB .body .clotheCont svg{
+  position: absolute;
+  top: 6%;
+  right: 10%;
+  width: 20px;
+  height: 20px;
+}
+
+#clothesContB .body .clotheCont .img{
+  width: 75%;
+  height: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+}
+
+#clothesContB .body .clotheCont .img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#clothesContB .body .clotheCont .description{
+  height: 25%;
+  width: 100%;
+}
+
+#clothesContB .body .clotheCont .description p{
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 7%;
+  font-size: 10.5px;
+  padding-bottom: 0;
+  padding-top: 4%;
+  margin-bottom: 5px;
+  height: 67%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#clothesContB .body .clotheCont .description h4{
+  text-align: center;
+}
+
+#clothesContB .body .clotheCont .description .desc{
+  display: flex;
+  margin: auto;
+  width: fit-content;
+}
+
+#clothesContB .body .clotheCont .description .desc h4{
+  text-decoration: line-through;
+}
+
+#clothesContB .body .clotheCont .description .desc h5{
+  font-size: 15px;
+  padding-left: 8px;
+}
+
+#clothesContB .body .clotheCont .mensaje{
+  position: absolute;
+  background: white;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  top: 0;
+  left: 8%;
+}
+
+#clothesContB .body .clotheCont .mensaje h1{
+  font-size: 16px;
+  margin: 4px;
+  color: black;
+  font-family: serif;
+  letter-spacing: 3px;
+}
+
+/*c*/
+#clothesContC{
+  background-color: #e7e7e7;
+}
+
+#clothesContC .header{
+  text-align: center;
+  border-bottom:  1px solid black;
+}
+
+#clothesContC .header h1{
+  font-size: large;
+  font-weight: 300;
+}
+
+#clothesContC .body{
+  display: grid;
+  background-color: #e7e7e7;
+}
+
+#clothesContC .body .clotheCont{
+  margin: .5%;
+  background-color: white;
+  position: relative;
+}
+
+#clothesContC .body .clotheCont svg{
+  position: absolute;
+  top: 6%;
+  right: 10%;
+  width: 20px;
+  height: 20px;
+}
+
+#clothesContC .body .clotheCont .img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#clothesContC .body .clotheCont .img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#clothesContC .body .clotheCont .description{
+  height: 21%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(0deg, #676767a8, transparent);
+}
+
+#clothesContC .body .clotheCont .description p{
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 4%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 12px;
+  letter-spacing: 1;
+  padding-bottom: 0;
+  padding-top: 3%;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  height: 62%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: white;
+}
+
+#clothesContC .body .clotheCont .description h4{
+  text-align: center;
+  color: white;
+}
+
+#clothesContC .body .clotheCont .description .desc{
+  display: flex;
+  margin: auto;
+  width: fit-content;
+}
+
+#clothesContC .body .clotheCont .description .desc h4{
+  text-decoration: line-through;
+}
+
+#clothesContC .body .clotheCont .description .desc h5{
+  font-size: 15px;
+  padding-left: 8px;
+}
+
+#clothesContC .body .clotheCont .mensaje{
+  position: absolute;
+  background: #282828;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  top: 0;
+  left: 8%;
+}
+
+#clothesContC .body .clotheCont .mensaje h1{
+  font-size: 16px;
+  margin: 4px;
+  color: white;
+  font-family: serif;
+  letter-spacing: 3px;
+}
+
+#clothesContC .body .clotheCont .sinStock{
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-top: solid 2px rgb(255, 191, 0);
+  border-bottom: solid 2px rgb(255, 191, 0);
+  width: 100%;
+  background: #282828;
+  text-align: center;
+  position: absolute;
+}
+
+#clothesContC .body .clotheCont .sinStock h1{
+  font-size: 16px;
+  margin: 4px;
+  color: white;
+  font-family: serif;
+  letter-spacing: 3px;
+}
+  @media (max-width: 650px){   
+    .imgHeader{
+      height: 33%;
+      background-size: contain;
+    }
+
+    #categoriesCont .category{
+      padding: 2.5%;
+      padding-bottom: 20px;
+    }
+    /*carrousel*/
+
+  #points{
+    margin-top: -8%;
+  }
+
+  .buttonCR{
+    top: auto;
+    bottom: 15%;
+    left: 10%;
+  }
+
+  #atras{
+    width: 27px;
+    height: 27px;
+  }
+
+  #adelante{
+    width: 27px;
+    height: 27px;
+  }
+
+  /*clothes*/
+  #clothesContBox button{
+    width: 200px;
+    color: white;
+    outline: transparent;
+    height: 40px;
+    margin: 50px;
+    border: none;
+    background: #272727;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  #clothesContBox button svg{
+    fill: white;
+    width: 40px;
+    height: 40px;
+  }
+
+  .clothesCont .body{
+    grid-template-columns: 50% 50%;
+  }
+
+  .clothesCont .body .clotheCont{
+    height: 52vh;
+  }
+  }
+  
+  @media (min-width: 951px){
+    .imgHeader{
+      height: 55%;
+      background-size: cover;
+    }
+    
+  /*carrousel*/
+    #atras{
+      width: 50px;
+      height: 50px;
+    }
+
+    #adelante{
+      width: 50px;
+      height: 50px;
+    }
+  
+  /*clothes*/
+  .clothesCont .body{
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  .clothesCont .body .clotheCont{
+    height: 60vh;
+  }
+
+  #clothesCont .body .clotheCont .img{
+    width: 55%;
+  }
+
+  #clothesContB .body .clotheCont .img{
+    width: 55%;
+  }
+  #clothesContBox button{
+    width: 25%;
+    height: 15%;
+  }
+  }
+  
+  @media (min-width: 651px) and (max-width: 950px){
+    .imgHeader{
+      background-size: cover;
+      height: 60%;
+    }
+    /*carrousel*/
+    #atras{
+      width: 50px;
+      height: 50px;
+    }
+
+    #adelante{
+      width: 50px;
+      height: 50px;
+    }
+  
+    /*clothes*/
+    .clothesCont .body{
+      grid-template-columns: 33% 33% 34%;
+    }
+
+    .clothesCont .body .clotheCont{
+      height: 60vh;
+    }
+
+    
+  #clothesContBox button{
+    width: 25%;
+    height: 15%;
+  }
+  }
+
+  @media (min-width: 651px) and (max-width: 750px){
+    #points{
+      margin-top: -6%;
+    }
+  }
+
+  @media (min-width: 476px) and (max-width: 650px){
+    .imgHeader{
+      height: 50%;
+    }
+  }
+
+  @media (max-height: 550px){
+    .clothesCont .body .clotheCont{
+      height: 70vh;
+    }
+  }
+  

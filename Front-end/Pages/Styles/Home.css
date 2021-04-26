@@ -1,0 +1,750 @@
+
+/*Restaurantes*/
+.restCont{
+margin-top: 6%;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5%;
+} 
+
+#restaurantesContainer{
+  /*background-color: #212121;*/
+  border-style: solid;
+  border-color: /*#FFC244*/black;
+}
+
+#restaurantes{
+text-align: center;
+position: relative;
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding-top: 2%;
+margin-bottom: 3%;
+}
+
+#restaurantes .restaurante{
+overflow: hidden;
+display: inline-block;
+margin: 2%;
+border-radius: 20px;
+transition: all 0.4s;
+}
+
+#restaurantes .restaurante .header{
+width: 100%;
+height: 100%;
+}
+
+#restaurantes .restaurante .header img{
+  width: 100%;
+  height: 100%;
+  filter: blur(2px);
+  object-fit: cover;
+  
+}
+
+#restaurantes .restaurante .body{
+  height: auto;
+  position: relative;
+  top: -63%;
+  z-index: 5;
+  display: flex;
+}
+
+#restaurantes .restaurante .body .text .left{
+  position: absolute;
+  left: 0;
+  width: 55%;
+  height: 80%;/*72*/
+}
+
+#restaurantes .restaurante .body .text .right{
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: /*72*/80%;
+}
+
+#restaurantes .restaurante .body .text span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#restaurantes .restaurante .body .text h3{
+  font-size: 18px;
+  color: #eeeeee;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#restaurantes .restaurante .body .text svg{
+  width: 15px;
+  height: 15px;
+  fill: white;
+  margin-right: 2%;
+}
+
+#restaurantes .restaurante .body .text{
+width: 100%;
+height: 40px;
+background-color: rgb(40 40 40 / 0.8);
+margin-top: 10px;/*
+border-bottom: solid #2ABB9B 2px;
+border-top: solid #2ABB9B 2px;*/
+display: flex;
+}
+
+#restaurantes .restaurante .body h1{
+font-size: 27px;
+margin-left: 90px;
+width: 70%;
+text-align: left;
+overflow: hidden;
+color: #ded9d9;
+}
+
+#restaurantes .restaurante .body .logo{
+border-radius: 100%;
+width: 60px;
+height: 60px;
+background-color: white;
+border-style: solid;
+border-width: 2px;
+border-color: #2ABB9B;
+position: absolute;
+top: 59%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 5;
+}
+
+#restaurantes .restaurante .body .logo img{
+resize: both;
+width: 100%;
+height: 100%;
+border-radius: 100%;
+}
+
+#restaurantes .restaurante .top{
+display: flex;
+position: absolute;
+background-color: hotpink;
+width: fit-content;
+right: 0;
+}
+
+#restaurantes .restaurante .top .calificacion{
+display: flex;
+width: fit-content;
+
+}
+
+#restaurantes .restaurante .top .calificacion h1{
+color: black;
+font-size: 20px;
+width: fit-content;
+margin: 0;
+}
+
+#restaurantes .restaurante .top .calificacion svg{
+width: 15px;
+height: 15px;
+}
+
+#restaurantes .restaurante .top .distancia{
+color: black;
+font-size: 20px;
+width: fit-content;
+margin: 0;
+}
+
+#restaurantes .restaurante:hover{
+border: solid;
+border-width: 3px;
+border-color: #FFC244;
+}
+
+#restaurantes .restaurante:not(:hover){
+border-width: 1px;
+}
+/**/
+
+/*carrousel*/
+
+#imagen1{
+  display: block;
+  margin: auto;
+}
+#imagen2, #imagen3, #imagen4{
+  display: none;
+  margin: auto;
+
+}
+#cr{
+  display: block;
+  width: 80%;
+  height: 65%;
+  margin: auto;
+  position: relative;
+  margin-top: 2%;
+  box-shadow: 0px 3px 6px 4px #888888;
+}
+
+#imagesCarrousel img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#points{
+  z-index: 1;
+  margin-top: -4%;
+  text-align: center;
+  position: relative;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: white;
+}
+
+#adelante{
+  float: right;
+}
+
+#atras{
+  float: left;
+}
+
+#rey{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  opacity: 0.4;
+}
+
+.buttonCR{
+  position: absolute;
+  left: 20%;
+  top: 60%;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.buttonCR h1{
+  font-size: 22px;
+  color: #000;
+  margin: 0;
+}
+
+.buttonCR:hover{
+  opacity: 0.5;
+}
+
+@media (max-width: 650px){
+
+  .header .al span{
+    display: none;
+  }
+
+  .header .person-login{
+    width: 35px;
+    height: 35px;
+    margin-right: 5%;
+  }
+
+  .headere h1{
+    font-size: 30px;
+  }
+
+  /*.header input{
+    display: none;
+  }*/
+
+  .header .headerCont{
+    width: 97%;
+  }
+
+  .header .search-cont{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 1%;
+  }
+
+  .header .al{
+    margin-left: 1%;
+  }
+
+  .header .search-icon{
+    width: 25px;
+    height: 25px;
+    margin-right: 5%;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    fill: black;
+  }
+  /*carrousel*/
+  #cr{
+    width: 95%;
+  }
+
+  #points{
+    margin-top: -8%;
+  }
+
+  .buttonCR{
+    top: auto;
+    bottom: 15%;
+    left: 10%;
+  }
+
+  #atras{
+    width: 60px;
+    height: 60px;
+  }
+
+  #adelante{
+    width: 60px;
+    height: 60px;
+  }
+  /*modalUbicacion*/
+
+  #myModalUbi .modal-content{
+    width: 85%;
+    height: 300px;
+  }
+
+  #myModalUbi .modal-content button{
+    background-color: white;
+    font-size: 120%;
+  }
+
+  #myModalUbi .modal-content .ubicacion{
+    height: 18%;
+  }
+
+  /*modal ini*/
+  .modalIni .modal-content {
+    width: 100%;
+    height:100%;
+    border: none;
+    border-radius: 0;
+  }
+  /*Modal izq*/
+
+  .mContent {
+      width: 0;
+      display: none;
+  }
+
+  /*restaurantes*/
+  .restCont{
+    width: 90%;
+  } 
+
+  #restaurantesContainer{
+    border-width: 2px;
+    border-left: none;
+    border-right: none;
+    /*border-radius: 30px;*/
+  }
+
+  #restaurantes .restaurante{
+    width: 280px;
+    height: 193px;
+  }
+  
+    /*carrito*/
+    
+    .modalContent {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      float: right;
+  }
+
+  .pedidos .pedido h3{
+      max-width: 60%;
+  }
+
+  .pedir svg{
+      width: 25px;
+      height: 25px;
+      /*lo centre a mano fijarse de cambiarlo*/
+  }
+
+  .modal{
+      padding-top: 50%;
+  }
+
+  
+  /*footer*/
+  .bottom{
+    border-top: solid rgb(150, 150, 150) 3px;
+  }
+
+  .bottom .body{
+    height: 700px;
+  }
+
+  .bottom .body .preguntasFrecuentes{
+    width: 100%;
+  }
+
+  .bottom .body .nosotros{
+    width: 100%;
+  }
+
+  .bottom .body .redesSociales{
+    width: 100%;
+  }
+
+  .bottom .body h3{
+    padding-top: 5%;
+  }
+
+  .bottom .body .preguntasFrecuentes li{
+    font-size: 12px;
+    padding-top: 3%;
+  }
+  
+  .bottom .body .nosotros li{
+    font-size: 12px;
+    padding-top: 3%;
+  }
+
+  .bottom .footer{
+    padding-top: 5%;
+  }
+}
+
+@media (min-width: 951px){
+
+  .header .headerCont{
+    width: 93%;
+  }
+
+  .header .search-cont{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 40%;
+    margin-left: 3%;
+  }
+
+  .header .search-icon{
+    width: 25px;
+    height: 25px;
+    margin-right: 5%;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    fill: black;
+  }
+
+  .header .person-login{
+    width: 35px;
+    height: 35px;
+    margin-right: 3%;
+  }
+
+  #sBarClose{
+    top: 2.5%; 
+    right: 42%;
+  }
+  /*carrousel*/
+
+  #atras{
+    width: 100px;
+    height: 100px;
+  }
+
+  #adelante{
+    width: 100px;
+    height: 100px;
+  }
+
+  /*modalUbicacion*/
+
+  #myModalUbi .modal-content{
+    width: 430px;
+  }
+
+  /*modalIni*/
+  .modalIni .modal-content {
+    width: 50%;
+    height:60%;
+  }
+
+  .mContent {
+      width: 0;
+      max-width: 25%;
+      display: none;
+  }
+
+  /*restaurantes*/
+  .restCont{
+    width: 85%;
+  } 
+
+  #restaurantesContainer{
+    border-width: 3px;
+    border-left: none;
+    border-right: none;
+  }
+
+  #restaurantes .restaurante{
+    width: 332px;
+    height: 230px;
+  }
+  /*carrito*/
+  .containerFactura{
+    display: none;
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    padding-left: 860px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.6);
+  }
+
+  .modalContent {
+      margin: auto;
+      width: 500px;
+      height: 100%;
+      float: right;
+  }
+
+  .pedidos .pedido h3{
+      max-width: 220px;
+  }
+
+  .pedir button{
+      height:40px;
+      width: 250px;
+      background-image: linear-gradient(130deg,#ff451a,#ff1517 70%);
+  }
+
+  .pedir svg{
+      width: 25px;
+      height: 25px;
+  }
+
+  .modal{
+      padding-top: 323px;
+      padding-left: 870px;
+  }
+  /*footer*/
+  .bottom .body{
+    display: flex;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 950px){
+
+  #atras{
+    width: 60px;
+    height: 60px;
+  }
+
+  #adelante{
+    width: 60px;
+    height: 60px;
+  }
+
+
+  .header .headerCont{
+    width: 93%;
+  }
+
+  .header .search-cont{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 40%;
+    margin-left: 3%;
+  }
+
+  .header .search-icon{
+    width: 25px;
+    height: 25px;
+    margin-right: 5%;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    fill: black;
+  }
+
+  .header .person-login{
+    width: 35px;
+    height: 35px;
+    margin-right: 3%;
+  }
+/*carrousel*/
+  #atras{
+    width: 100px;
+    height: 100px;
+  }
+
+  #adelante{
+    width: 100px;
+    height: 100px;
+  }
+
+  /*modalIni*/
+  .modalIni .modal-content {
+    width: 65%;
+    height:85%;
+  }
+    
+  .mContent {
+    width: 0;
+    max-width: 45%;
+    display: none;
+  }
+
+  /*modalUbicacion*/
+
+  #myModalUbi .modal-content{
+    width: 50%;
+  }
+
+  /*restaurantes*/
+  .restCont{
+    width: 85%;
+  } 
+
+  #restaurantesContainer{
+    border-width: 3px;
+    border-left: none;
+    border-right: none;
+  }
+  #restaurantes .restaurante{
+    width: 280px;
+    height: 193px;
+  }
+  
+
+    /*carrito*/
+    .containerFactura{
+      display: none;
+      position: fixed;
+      z-index: 6;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.6);
+  }
+  
+  .modalContent {
+      margin: auto;
+      width: 500px;
+      height: 100%;
+      float: right;
+  }
+
+  .pedidos .pedido h3{
+      max-width: 220px;
+  }
+
+  .pedir button{
+      height:40px;
+      width: 250px;
+      background-image: linear-gradient(130deg,#ff451a,#ff1517 70%);
+  }
+
+  .pedir svg{
+      width: 25px;
+      height: 25px;
+  }
+
+  .modal{
+      padding:auto;
+      padding-top: 40%;
+  }
+
+  /*footer*/
+  .bottom .body{
+    display: flex;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 750px){
+
+.header .search-cont{
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 32%;
+  margin-left: 3%;
+}
+
+#sBarClose{
+  top: 2.5%; 
+  right: 42%;
+}
+
+#myModalUbi .modal-content{
+  width: 400px;
+}
+
+#points{
+  margin-top: -6%;
+}
+}
+
+@media (min-width: 751px) and (max-width: 900px){
+#sBarClose{
+  top: 2.5%; 
+  right: 37%;
+}
+}
+
+@media (min-width: 901px) and (max-width: 980px){
+#sBarClose{
+  top: 2.5%; 
+  right: 38%;
+}
+}
+
+@media (min-width: 981px) and (max-width:1180px){
+#sBarClose{
+  top: 2.5%; 
+  right: 40%;
+}
+}
+
+@media (min-width: 1180px){
+#sBarClose{
+  top: 2.5%; 
+  right: 42%;
+}
+}
